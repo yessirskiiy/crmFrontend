@@ -10,7 +10,6 @@ import {logOut} from "../../../entities/user/model/userSlice.ts";
 import styles from './Sidebar.module.scss';
 
 
-
 const Sidebar = () => {
 
     const dispatch = useDispatch()
@@ -22,15 +21,15 @@ const Sidebar = () => {
     };
 
 
-
-
     return (
         <div className={styles.sidebar}>
             <div className={styles.content}>
-                <h1>H&H CRM</h1>
+                <Link to='/'>
+                    <h1>H&H CRM</h1>
+                </Link>
                 <ul>
                     <li>
-                        <Link to='/projects'
+                        <Link to='/'
 
                               className={active === 'projects' ? `${styles.active}` : ''}
                               onClick={() => toggleMenu('projects')}

@@ -1,4 +1,3 @@
-// userReducers.ts
 import { loginUser, registerUser } from "./asyncActions";
 
 export const loginReducers = (builder) => {

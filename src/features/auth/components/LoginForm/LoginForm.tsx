@@ -3,8 +3,9 @@ import {MyButton, MyInput} from "../../../../shared";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {loginUser} from "../../../../entities/user/model/asyncActions.ts";
 import {selectUser} from "../../../../entities/user/model/userSelector.ts";
+import {loginUser} from "../../../../entities/user/model/asyncActions.ts";
+
 
 // @ts-ignore
 import styles from './LoginForm.module.scss';

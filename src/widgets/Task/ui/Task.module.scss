@@ -1,0 +1,42 @@
+.info {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  max-height: 100%;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  width: 1250px;
+  background-color: white;
+  border-radius: 10px;
+
+  .topBar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    max-height: 100px;
+    font-weight: bold;
+
+    .title {
+
+    }
+
+    .date{
+
+    }
+
+  }
+
+  .midBar{
+    display: flex;
+    padding: 20px;
+    max-height: 800px;
+
+    .attachments{
+      width: 400px;
+    }
+
+    .description{
+      max-width: 330px;
+    }
+  }
+}

@@ -20,7 +20,7 @@ const Header = () => {
                 <a className={styles.notifications}>
                     <GrNotification className="w-6 h-6"/>
                 </a>
-                <Link to='/profile' className={styles.userInfo}>
+                <Link to={`profile/${user.id}`} className={styles.userInfo}>
                     <img src={user.avatar_url} alt="Profile"/>
                     <span>{user.name}</span>
                 </Link>
