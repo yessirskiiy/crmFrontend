@@ -9,10 +9,10 @@ interface ButtonProps {
 }
 
 
-const Button = ({children}: ButtonProps) => {
+const Button = ({...props}) => {
     return (
-        <button className={styles.button}>
-            {children}
+        <button className={styles.button} {...props}>
+            {props.children}
         </button>
     );
 };

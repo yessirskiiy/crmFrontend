@@ -1,4 +1,4 @@
-import {Login} from "../../../features";
+import {Login} from "features/index.ts";
 
 const SignIn = () => {
     return (

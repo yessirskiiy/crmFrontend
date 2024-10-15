@@ -1,4 +1,5 @@
-import {Register} from "../../../features";
+import {Register} from "features/index.ts";
+
 
 const SignUp = () => {
     return (

@@ -4,7 +4,7 @@ import {AiFillHome, AiFillProject} from 'react-icons/ai';
 import {BsFillCalendarFill} from 'react-icons/bs';
 import {Link} from 'react-router-dom'
 import {useDispatch} from "react-redux";
-import {logOut} from "../../../entities/user/model/userSlice.ts";
+import {logOut} from "entities/user/model/userSlice.ts";
 
 // @ts-ignore
 import styles from './Sidebar.module.scss';

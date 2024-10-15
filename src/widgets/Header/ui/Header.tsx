@@ -1,17 +1,22 @@
 import {GrNotification} from 'react-icons/gr';
 import {Link} from "react-router-dom";
-import {MyButton, MyInput} from "../../../shared";
-import {selectUser} from "../../../entities/user/model/userSelector.ts";
+import {MyButton, Search} from "shared/index.ts";
+import {selectUser} from "entities/user/model/userSelector.ts";
 import {useSelector} from "react-redux";
+import { useModal } from "shared/ui/Modal/model/ModalContext.tsx"
 
 
 // @ts-ignore
 import styles from './Header.module.scss'
+import {Select} from "antd";
 
 
-const Header = () => {
+
+
+const Header = ({onSearch, buttonText, pageTitle}) => {
 
     const {user} = useSelector(selectUser)
+    const {setModalOpen} = useModal()
 
 
     return (
@@ -27,16 +32,17 @@ const Header = () => {
             </div>
             <div className={styles.lowerBar}>
                 <div>
-                    <h1 className={styles.title}>Some title</h1>
+                    <h1 className={styles.title}>{pageTitle}</h1>
                 </div>
                 <div className={styles.actions}>
                     <div className={styles.searchInput}>
-                        <MyInput placeholder="Search" className={styles.searchInput}/>
+                        <Search className={styles.searchInput} onSearch={onSearch}/>
                     </div>
-                    <MyButton>Добавить что то</MyButton>
+                    <MyButton onClick={() => setModalOpen(true)}>{buttonText}</MyButton>
                 </div>
             </div>
         </div>
+
     );
 };
 

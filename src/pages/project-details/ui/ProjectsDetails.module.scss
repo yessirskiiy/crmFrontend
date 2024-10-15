@@ -5,6 +5,7 @@
   .taskList {
     display: grid;
     max-width: 200px;
+    width: 200px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
     grid-column-gap: 0px;
@@ -44,4 +45,34 @@
     text-align: center;
   }
 
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  .formGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .datePicker, .select {
+    flex: 1;
+    width: 100%;
+  }
+
+  .select .ant-select-selector {
+    border-radius: 4px;
+  }
 }

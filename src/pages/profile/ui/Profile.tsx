@@ -1,9 +1,9 @@
 import {Sidebar} from "../../../widgets/Sidebar";
+import {useSelector} from "react-redux";
+import {selectUser} from "entities/user/model/userSelector.ts";
 
 // @ts-ignore
 import styles from './Profile.module.scss'
-import {useSelector} from "react-redux";
-import {selectUser} from "../../../entities/user/model/userSelector.ts";
 
 
 const Profile = () => {

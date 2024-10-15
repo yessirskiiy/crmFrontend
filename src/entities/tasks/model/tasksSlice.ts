@@ -1,5 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {taskGetReducer, tasksFetchReducer} from "./tasksReducer.ts";
+import {
+    commentAddReducer,
+    commentRemoveReducer,
+    taskCreateReducer,
+    taskGetReducer,
+    tasksFetchReducer
+} from "./tasksReducer.ts";
 
 
 
@@ -14,24 +20,24 @@ export const tasksSlice = createSlice({
     name: 'tasks',
     initialState,
     reducers: {
-        setTasks(state, action) {
+        setTasks(state, action){
             state.tasks = action.payload
-        },
-        // getTask(state, action){
-        //     state.selectedTask = state.tasks.find(task => task.Id === action.payload.Id)
-        // }
+        }
+
     },
     extraReducers: (builder) => {
         tasksFetchReducer(builder)
         taskGetReducer(builder)
+        taskCreateReducer(builder)
+        commentAddReducer(builder)
+        commentRemoveReducer(builder)
+
     }
 })
 
 
 export const {
     setTasks,
-    getTask,
-    setActiveTask,
 } = tasksSlice.actions
 
 export default tasksSlice.reducer

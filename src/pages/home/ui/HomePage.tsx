@@ -1,9 +1,9 @@
-import {ProjectCard, SkeletonCard} from "../../../widgets/ProjectCard";
 import {useDispatch, useSelector} from "react-redux";
-import {selectProjects} from "../../../entities/project/model/projectsSelector.ts";
+import {selectProjects} from "entities/project/model/projectsSelector.ts";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
-import {fetchProjects} from "../../../entities/project/model/asyncActions.ts";
+import {fetchProjects} from "entities/project/model/asyncActions.ts";
+import {ProjectCard, SkeletonCard} from "widgets/ProjectCard";
 
 
 //@ts-ignore
@@ -16,7 +16,6 @@ const HomePage = () => {
     const dispatch = useDispatch()
 
 
-
     useEffect(() => {
         dispatch(fetchProjects())
     }, [])
@@ -26,8 +25,6 @@ const HomePage = () => {
     const onClickProjectDetails = (Code) => {
         navigate(`/project/${Code}`)
     }
-
-
 
 
     return (
